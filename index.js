@@ -1,8 +1,17 @@
 const fs = require("fs");
 const axios = require("axios");
 const inquirer = require("inquirer");
-
 const pdf = require('html-pdf');
+
+function createPDF () {
+  var html = fs.readFileSync('./index.html', 'utf8');
+  var options = { format: 'Letter' };
+
+  pdf.create(html, options).toFile('./index.pdf', function (err) {
+    if (err) return console.log(err);
+    console.log("Successfully converting hml to pdf");
+  });
+}
 
 
 const util = require("util");
@@ -27,13 +36,15 @@ function promptUser() {
 function apiCall(data) {
   const queryUrl = `https://api.github.com/users/${data.username}`;
 
-  return axios.get(queryUrl).then(res => res.data);
+  return axios.get(queryUrl).then(res => {
+    return res.data
     // .then(function (res) {
     //   console.log(res.data);
 
 
     // });
-};
+});
+}
 
 
 
@@ -226,7 +237,7 @@ function generateHTML(data, apiData, ) {
         <div class="wrapper">
         <div class="container">
           <div class="photo-header img">
-          
+          <img src = "#" alt="profile image">
           </div>
           <div class = "photo-header">
             <h2>Hello!</h2>
@@ -288,8 +299,9 @@ async function init() {
     const html = generateHTML(data, apiData);
 
     await writeFileAsync("index.html", html);
-
-    console.log("Successfully wrote to index.html");
+    
+    createPDF();
+    console.log("Created an index.html");
    
   } catch (err) {
     console.log(err);

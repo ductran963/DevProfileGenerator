@@ -2,7 +2,7 @@
 
 #### Purpose
 
-The purpose of this project is to learn to make API call and to manipulate node.js so that we can run all of our javascript without using browser. We also learn to use template literal as well as converting html to css.
+The purpose of this project is to learn to make API call and to manipulate node.js so that we can run all of our javascript without using browser. We also learn to use template literal as well as converting html to pdf.
 
 
 #### Functionality

@@ -14,7 +14,13 @@ The functionality is to create a developer profile so that we can track github u
 https://ductran963.github.io/DevProfileGenerator/
 
 
-#### Developer Profile image:
+#### Developer Profile HTML image:
 
 ![image info](./devProfile.png)
+
+
+#### Developer Profile PDF image:
+
+![image info](./devProfilePDF.png)
+
 

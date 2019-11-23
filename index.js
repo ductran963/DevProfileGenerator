@@ -210,10 +210,10 @@ function generateHTML(data, apiData, ) {
          }
 
          .bio {
-          adding-left: 83px;
+          padding-left: 83px;
           font-size: 22px;
          }
-         }
+         
          
          .col {
          flex: 1;
@@ -237,7 +237,7 @@ function generateHTML(data, apiData, ) {
         <div class="wrapper">
         <div class="container">
           <div class="photo-header img">
-          <img src = "#" alt="profile image">
+          <img src = "${apiData.avatar_url}" alt="profile image">
           </div>
           <div class = "photo-header">
             <h2>Hello!</h2>

@@ -10,7 +10,7 @@ The purpose of this project is to learn to make API call and to manipulate node.
 The functionality is to create a developer profile so that we can track github users progress, their followers, their followings as well as their repos and updated profile.
 
 
-#### Link to github page: 
+#### Link to deployed project: 
 https://ductran963.github.io/DevProfileGenerator/
 
 
